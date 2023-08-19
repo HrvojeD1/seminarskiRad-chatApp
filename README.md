@@ -1,3 +1,10 @@
+color pallete
+#6785ff
+#252837
+#1d1f2b
+#33364b;
+#7a7fa7
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background: rgb(62, 67, 91);
+	background: linear-gradient(
+		135deg,
+		rgba(62, 67, 91, 1) 0%,
+		rgba(35, 39, 64, 1) 100%
+	);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Main {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 90vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Header {
+	border-top: 5px solid #6785ff;
+	border-left: 5px solid #6785ff;
+	border-right: 5px solid #6785ff;
+	padding: 20px;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+	margin: 0 auto;
+	background-color: #252837;
+	overflow: visible;
+	width: 70%;
+	text-align: center;
+	color: #7a7fa7;
+	font-size: 1.3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.SvePoruke {
+	border-left: 5px solid #6785ff;
+	border-right: 5px solid #6785ff;
+	padding: 20px 0;
+	width: 70%;
+	margin: 0 auto;
+	list-style: none;
+	padding-left: 0;
+	flex-grow: 1;
+	overflow: auto;
+	background-color: #1d1f2b;
 }
 
-.App-link {
-  color: #61dafb;
+.Messages-message {
+	display: flex;
+	margin: 10px 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Messages-message.currentMember {
+	flex-direction: row-reverse;
+	text-align: right;
+}
+
+.PorukaWrapper {
+	display: inline-block;
+}
+
+.currentMember > .PorukaWrapper {
+	align-items: flex-end;
+}
+
+.Messages-message > .BojaKorisnika {
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 0 10px -10px;
+	border: 5px solid #6785ff;
+}
+
+.PorukaWrapper > .korisnik {
+	display: block;
+	color: #7a7fa7;
+	font-size: 14px;
+	padding-bottom: 4px;
+}
+
+.PorukaWrapper > .sadrzajPoruke {
+	padding: 10px;
+	max-width: 400px;
+	margin: 0;
+	border-radius: 12px;
+	border-top-left-radius: 0;
+	background-color: #33364b;
+	color: white;
+	display: inline-block;
+}
+
+.currentMember > .PorukaWrapper .sadrzajPoruke {
+	background-color: #6785ff;
+	border-radius: 12px;
+	border-top-right-radius: 0;
+}
+
+form {
+	border-left: 5px solid #6785ff;
+	border-right: 5px solid #6785ff;
+	border-bottom: 5px solid #6785ff;
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+	padding: 30px;
+	background-color: #252837;
+	display: flex;
+	width: 70%;
+	justify-content: space-between;
+	margin: 0 auto 40px;
+}
+
+input {
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 20px;
+	background-color: #6785ff;
+	border: none;
+	width: 85%;
+	color: white;
+	font-family: Impact, sans-serif;
+}
+
+input::placeholder {
+	color: white;
+	opacity: 1;
+}
+
+button {
+	padding: 5px 50px;
+	font-size: 16px;
+	background-color: #6785ff;
+	color: white;
+	border: none;
+	border-radius: 20px;
+	margin-left: 10px;
+	font-family: Impact, sans-serif;
+}
+
+@media (max-width: 480px) {
+	.Main {
+		margin-top: 10px;
+		height: 90vh;
+	}
+
+	.Header {
+		width: 95%;
+	}
+
+	.SvePoruke {
+		width: 95%;
+	}
+	form {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 10px;
+		width: 95%;
+	}
 }
